@@ -1,1 +1,1 @@
-# 2024-build-club-hackathon
+# 2024-build-club-ai-hackathon
