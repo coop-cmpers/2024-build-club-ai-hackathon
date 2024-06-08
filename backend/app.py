@@ -22,7 +22,12 @@ def getVolunteeringRecommendations():
   keyword = request.args.get("keyword")
   
   opportunities = jigsawStack.scrapeVolunteeringOpportunities(location, keyword)
-  suggestions = genAI.getVolunteeringSuggestions(opportunities)
+  volunteering = genAI.getVolunteeringSuggestions(opportunities)
+  occupations = jigsawStack.getOccupationSuggestions(keyword)
 
-  response = { "suggestions": suggestions }
+  response = { 
+    "volunteering": volunteering,
+    "occupations": occupations,
+  }
+  
   return jsonify(response)
