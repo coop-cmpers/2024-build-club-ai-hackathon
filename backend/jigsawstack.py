@@ -1,7 +1,7 @@
 import requests
 
 class JigsawStack:
-  def __init__(self, key: str):
+  def __init__(self, key: str) -> None:
     self.jssHeaders = { "x-api-key": key }
     self.jssBaseURL = "https://api.jigsawstack.com"
 
